@@ -1,12 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Test Page</title>
-</head>
-<body>
+@extends('layouts.master')
+
+@section('title', 'single blade dengan templating')
+
+@section('content')
     <h1>Selamat datang  {{ $username }}</h1>
-</body>
-</html>
+
+    {{-- @foreach($users as $user)
+        <li> {{ $user->username . ' ' . $user->password }}</li>
+    @endforeach
+
+    @if(count($users) > 5)
+        <p>usernya lebih dari lipa</p>
+    @else
+        <p>usernya tidak lebih dari lima</p>
+    @endif --}}
+
+    <h2>Ini adalah halaman profile {{ $users->username }}</h2>
+
+@endsection
+    
